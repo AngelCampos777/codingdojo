@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.center-box{
+    margin: 15px;
+}
+.tall{
+    height: 250px;
+}
+.short{
+    height:150px;
+}
+.flex{
+    display: flex;
+}
+.justify{
+    justify-content: space-around;
+}
+.align-c{
+    align-items: center;
+}
+
+.shrink{
+    width: 100px;
+}
+
+.banner{
+    background-color:rgb(25,0,128);
+}
+.navBar{
+    background-color:rgb(100,149,237);
+    color: white;
+}
+.logoBox{
+    background-color:rgb(249,228,182);
+    height:78px;
+    width: 100px;
+}
+img{
+    width: 100px;
+}
+ul{
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 50%;
+}
+.parent{
+    border: 2px solid red;
+}
