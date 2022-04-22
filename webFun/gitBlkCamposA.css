@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-right: 20px;
+}
+.row {
+
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+}
+.cblue{
+    background-color: cornflowerblue;
+}
+.green{
+    background-color: rgb(65, 144, 65);
+}
+.dblue{
+    background-color: rgb(18, 34, 61);
+}
+
+img {
+    height: 200px;
+    align-items:center;
+    margin: 50px;
+}
+
+.jsb {
+    display: flex;
+    justify-content: space-between;
+}
+.jse {
+    display: flex;
+    justify-content: space-evenly;
+}

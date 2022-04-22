@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding:0;
+
+}
+div {
+    border: 2px solid black;
+}
+.row {
+    display: flex;
+    width: 100%;
+}
+.col {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(117, 137, 137);
+}
+.col-2 {
+    flex: 2;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(68, 42, 154);
+}
+
+.col-3 {
+    flex: 3;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(219, 173, 66);
+}
