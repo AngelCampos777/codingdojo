@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicky</title>
+    <link rel="stylesheet" href="btnClkrCamposA.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- banner -->
+    <div class="nav gray title">
+        <h1 class="nav">Dojonary</h1>
+        <input class="nav searchbar" type="text" placeholder="search">
+            <button class="shadow" onclick="change()"><span id="b1">Login</span></button>
+    </div>
+    <!-- content -->
+    <div class="content flex">
+        <!-- left -->
+        <div class="left">
+            <!-- def1 -->
+            <div class="parent flex">
+                <!-- d1 right -->
+                <div class="d1left">
+                    <h1>ninja</h1>
+                    <h3>noun</h3>
+                    <p>Plural: ninjas</p>
+                    <button class="shadow2" onclick="incriment(this)"><span id="num1">1</span> Likes</button>
+                </div>
+                <div class="d1right">
+                    <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                </div>
+            </div>
+            <!-- def2 -->
+            <div class="parent flex">
+                <div class="d1left">
+                    <h1>ninja</h1>
+                    <h3>noun</h3>
+                    <p>Plural: ninjas</p>
+                    <button class="shadow2" onclick="incriment2(this)"><span id="num2">2</span> Likes</button>
+                </div>
+                <div class="d1right">
+                    <p>A <a href="#">Programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                </div>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="right alignTop">
+            <!-- add def -->
+            <div class="parent">
+                <h3>Dojonary is defined by <h2>YOU</h2></h3>
+                <br>
+                <button class="shadow3" onclick="hide(this)">Add Definition</button>
+            </div>
+        </div>
+    </div>
+<script src="js/btnClkrCamposA.js"></script>
+</body>
+</html>

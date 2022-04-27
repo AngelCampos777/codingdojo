@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="likesCamposA.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- page -->
+    <div class="page">
+        <!-- banners -->
+        <h2 class="banner1 padding flex">Network</h2>
+        <h2 class="banner2 padding flex">Your Feed</h2>
+        <!-- content -->
+        <div class="flex">
+            <!-- Lside -->
+            <div class="parentL margint">
+                <div class="profile border">
+                    <img src="icons/user-circle.png" alt="profile" class="icon"><br>
+                    <a href="#">Add an Avatar</a>
+                    <h2>James Doe</h2>
+                </div>
+            </div>
+            <!-- Rside -->
+            <div class="parentR">
+                <div class="friends border">
+                    <div class="header flex paddingt">
+                        <h2>Neil M</h2>
+                        <p class="marginLr"><span id="nm">9</span> Like(s)</p>
+                        <button onclick="likes(0)" class="shadow">Like</button>
+                    </div>
+                    <p class="paddingb">I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
+                </div>
+                <div class="friends border profile margintb">
+                    <div class="header flex">
+                        <h2>Nichole K</h2>
+                        <p class="marginLr"><span id="nk">12</span> Like(s)</p>
+                        <button onclick="likes(1)" class="shadow">Like</button>
+                    </div>
+                    <p>Just finished my <a href="#">next comic</a>, check it out.</p>
+                </div>
+                <div class="friends border profile">
+                    <div class="header flex">
+                        <h2>Jim R</h2>
+                        <p class="marginLr"><span id="jr">9</span> Like(s)</p>
+                        <button onclick="likes(2)" class="shadow">Like</button>
+                    </div>
+                    <p>I can't stop listening to this <a href="#">new album.</a> Who else is listening to it?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/likesCamposA.js"></script>
+</body>
+</html>

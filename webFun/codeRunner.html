@@ -11,3 +11,274 @@
         I am Llama's coding tester
     </body>
 </html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">
+        <div class="nav">
+            <h1>DojoWeather</h1>
+            <ul class="links">
+                <li onclick="loading()"><a href="#">Burbank</a></li>
+                <li onclick="loading()"><a href="#">Chicago</a></li>
+                <li onclick="loading()"><a href="#">Dallas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="subtitle-line">
+            <h2>San Jose</h2>
+            <form>
+                <label>Show temperature in </label>
+                <select name="temperature-scale" onchange="convert(this)">
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+            </form>
+        </div>
+        <div class="row">
+            <div class="forecast">
+                <h1>Today</h1>
+                <img src="assets/some_rain.png" alt="rain">
+                <p>some rain</p>
+                <p class="temperatures">
+                    <span class="high" id="temp1">24</span>
+                    <span class="low" id="temp2">18</span>
+                </p>
+            </div>
+            <div class="forecast">
+                <h1>Tomorrow</h1>
+                <img src="assets/some_sun.png" alt="sun">
+                <p>some sun</p>
+                <p class="temperatures">
+                    <span class="high" id="temp3">27</span>
+                    <span class="low" id="temp4">19</span>
+                </p>
+            </div>
+            <div class="forecast">
+                <h1>Friday</h1>
+                <img src="assets/some_clouds.png" alt="clouds">
+                <p>some cloud</p>
+                <p class="temperatures">
+                    <span class="high" id="temp5">21</span>
+                    <span class="low" id="temp6">16</span>
+                </p>
+            </div>
+            <div class="forecast">
+                <h1>Saturday</h1>
+                <img src="assets/some_sun.png" alt="sun">
+                <p>some sun</p>
+                <p class="temperatures">
+                    <span class="high" id="temp7">26</span>
+                    <span class="low" id="temp8">21</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="cookie-policy">
+            <img src="assets/cookie.png" alt="cookie">
+            <div class="text">
+                <h2>Stop! Cookie time.</h2>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our site traffic. <a href="#">Read more...</a></p>
+            </div>
+            <button class="btn" onclick="accept()">Accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
+<!-- 
+var cookieDiv = document.querySelector(".cookie-policy");
+
+function loading() {
+    alert("Loading weather report...")
+}
+
+function accept() {
+    cookieDiv.remove();
+}
+
+function c2f(temp) {
+    return Math.round(9 / 5 * temp + 32);
+}
+
+function f2c(temp) {
+    return Math.round(5 / 9 * (temp - 32));
+}
+
+function convert(element) {
+    console.log(element.value);
+    for(var i=1; i<9; i++) {
+        var tempSpan = document.querySelector("#temp" + i);
+        var tempVal = parseInt(tempSpan.innerText);
+        if(element.value == "°C") {
+            tempSpan.innerText = f2c(tempVal);
+        } else {
+            tempSpan.innerText = c2f(tempVal);
+        }
+    }
+} -->
+<!-- * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.top {
+    background-color: #9fc5f8;
+    color: #fff;
+}
+
+.container, .nav {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.nav h1 {
+    font-size: 2.5rem;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.subtitle-line {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #999;
+}
+
+.subtitle-line h2 {
+    font-size: 1.8rem;
+}
+
+.subtitle-line select, .subtitle-line label {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.subtitle-line select {
+    width: 60px;
+}
+
+.row {
+    display: flex;
+}
+
+.forecast {
+    flex: 1;
+    text-align: center;
+    background-color: #ddd;
+    padding: 40px 0;
+    margin-right: 20px;
+}
+
+.forecast:last-child {
+    margin-right: 0;
+}
+
+.forecast img {
+    border-radius: 50%;
+    width: 156px;
+    margin: 40px 0;
+}
+
+.forecast p {
+    font-size: 1.2rem;
+}
+
+.temperatures {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.high, .low {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.high::after, .low::after {
+    content: "°";
+}
+
+.high {
+    color: #cf2a27;
+}
+
+.low {
+    color: #2b78e4;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.cookie-policy {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 160px;
+    padding: 20px;
+    border: 2px solid #999;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #000;
+    background-color: #9fc5f8;
+    cursor: pointer;
+}
+
+.text {
+    width: 70%;
+}
+
+.text h2 {
+    font-size: 1.8rem;
+}
+
+.text p {
+    font-size: 1.2rem;
+} -->

@@ -1,0 +1,88 @@
+* {
+    /* outline: 1px solid magenta; */
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+/* nav */
+.nav {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.searchbar{
+    width: 70%;
+    margin-left: -40px;
+}
+
+.gray {
+    background-color: rgb(204,204,204);
+}
+
+.shadow {
+    width: 100px;
+    background-color: rgb(43,120,228);
+    color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    padding: 5px 5px;
+    font-size: large;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+/* content */
+.content {
+    width: 80%;
+    height: 80%;
+    border: 1px solid burlywood;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parent{
+    border: 3px solid black;
+    margin: 20px 20px;
+    padding: 30px;
+}
+/* left */
+.left {
+    width: 60%;
+    height: 100%;
+    border: 1px solid slateblue;
+    justify-content: flex-start;
+}
+.d1right {
+    margin: 20px auto;
+}
+.shadow2 {
+    width: 100px;
+    background-color: rgb(255,217,102);
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    padding: 5px 5px;
+    font-size: large;
+}
+/* right */
+.right {
+    width: 40%;
+    height: 100%;
+    border: 1px solid yellowgreen;
+    justify-content: flex-end;
+}
+.alignTop {
+    align-self: flex-start;
+}
+.shadow3 {
+    width: 250px;
+    background-color: rgb(147,196,125);
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    padding: 5px 5px;
+    font-size: large;
+}
