@@ -3,7 +3,7 @@ exam1CamposA.html
 anakin-sand.jpg
 \pbasicsZips\examCamposA.zip
 .\webFun\exam2CamposA.css
-.\webFun\exam2CamposA
+..\webFun\exam2CamposA
 .\webFun\js\exam2CamposA.js
 .\webFun\test2img
 .\webFun\test2img\assets
