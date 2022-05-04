@@ -1,21 +1,34 @@
 class User:
-    def __init__(self, name, email):
+    def __init__(self, name, email, accounts):
         self.name = name
         self.email = email
+        self.accounts = []
         self.account = Account(int_rate=0.02, balance=0)
-    def deposit(self, amount):
+        self.accounts.append(Account)
+
+
+    def deposit(self, amount, account):
         self.account.balance += amount
         return self
-    def withdrawal(self, amount):
+
+
+    def withdrawal(self, amount, account):
         self.account.balance -= amount
         return self
+
+
     def transfer(self, other_user, amount):
         self.account.balance -= amount
         other_user.account.balance += amount
         return self
+
+
     def display_balance(self):
         print(self.account.display_info())
         return self
+
+
+        
 class Account:
     def __init__(self, int_rate = 0, balance = 0):
         self.int_rate = int_rate

@@ -16,7 +16,7 @@ class Card():
             self.rank = 'King'
         else:
             self.rank = str(self.value)
- 
+
     # this could go in the init method too
     # leaving it seperate to demonstrate property decorator
     @property
