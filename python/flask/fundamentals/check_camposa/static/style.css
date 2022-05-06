@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.table {
+    height: 100%;
+    min-height: 200px;
+    width: 90%;
+    min-width: 200px;
+    display: block;
+}
+table tr td {
+    height: 50px;
+    width: 50px;
+}
+.color1 {
+    background-color: blue;
+}
+.color2 {
+    background-color: green;
+}
