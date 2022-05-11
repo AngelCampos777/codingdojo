@@ -1,0 +1,9 @@
+#UPDATE users SET first_name = "Chauncey", last_name = "Billups", updated_at = NOW() WHERE id = 5;
+#UPDATE users SET handle = "denverDynamite", updated_at = NOW() WHERE id = 5;
+SELECT * from users;
+#DELETE FROM users WHERE id = 3;
+SELECT * FROM tweets;
+INSERT INTO tweets (tweet, user_id, created_at,updated_at)
+VALUES ("mike check", 1, NOW(), NOW());
+UPDATE users SET
+first_name = 'REDACTED' WHERE id = 2;
