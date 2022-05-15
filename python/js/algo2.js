@@ -180,13 +180,13 @@ function rotateStr(str, amnt) {
     let charsToRotate = "";
     let newStr = "";
 
-    if(!rotateAmnt || rotateAmnt <= 0){
+    if (!rotateAmnt || rotateAmnt <= 0) {
         return str;
     }
-    for(let i = str.length - rotateAmnt; i < str.length ;i++){
-    charsToRotate += str[i];
+    for (let i = str.length - rotateAmnt; i < str.length; i++) {
+        charsToRotate += str[i];
     }
-    for(let i = 0; i < str.length - rotateAmnt; i++){
+    for (let i = 0; i < str.length - rotateAmnt; i++) {
         newStr += str[i];
     }
     return charsToRotate + newStr;
@@ -221,9 +221,61 @@ const expect3 = false;
  */
 
 function isRotation(s1, s2) {
-    if(s1.length !== s2.length || s1 === s2){
+    if (s1.length !== s2.length || s1 === s2) {
         return false;
     }
-    return (s1+s1).includes(s2);
+    return (s1 + s1).includes(s2);
 }
-console.log(isRotation(strA1,strB1))
+console.log(isRotation(strA1, strB1))
+
+function isAnagram(string_a, string_b) {
+
+    var str1 = string_a.toUpperCase();
+    str1 = str1.split('');
+    str1.sort()
+    
+    str1 = str1.join('')
+
+    var str2 = string_b.toUpperCase();
+    str2 = str2.split('');
+    str2.sort()
+    str2 = str2.join('')
+
+    if (str1 === str2) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+export function isAnagram(string_a, string_b) {
+    var strCtA = {};
+    var newStrA = "";
+    var strCtB = {};
+    var newStrB = "";
+
+    for (var letter of string_a) {
+        if (letter in string_a != " ") {
+            if (!strCtA[letter]) {
+                strCtA[letter] = 1;
+                console.log(strCtA)
+            } else {
+                strCtA[letter]++;
+                console.log(strCtA);
+            }
+        }
+    }
+    for (var letter of string_b) {
+        if (letter in string_b != " ") {
+            if (!strCtB[letter]) {
+                strCtB[letter] = 1;
+                console.log(strCtB)
+            } else {
+                strCtB[letter]++;
+                console.log(strCtB);
+            }
+        }
+    }
+}
+

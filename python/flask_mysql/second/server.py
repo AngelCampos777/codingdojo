@@ -1,7 +1,6 @@
-from second_app import app
-# import the class from friend.py
-from flask_app.controllers import #insert
-
+from flask_app import app
+from flask_app.controllers import #insert controllername(s)
+#may have many controllers name(s)_controller
 
 
 if __name__ == "__main__":
