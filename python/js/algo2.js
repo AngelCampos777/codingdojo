@@ -233,7 +233,7 @@ function isAnagram(string_a, string_b) {
     var str1 = string_a.toUpperCase();
     str1 = str1.split('');
     str1.sort()
-    
+
     str1 = str1.join('')
 
     var str2 = string_b.toUpperCase();
@@ -279,3 +279,30 @@ export function isAnagram(string_a, string_b) {
     }
 }
 
+function interleaveArrays(arrayA, arrayB) {
+    var newArr = [];
+    var i = 0;
+    while (i < arrayA.length || i < arrayB.length) {
+        if (i < arrayA.length) {
+            newArr.push(arrayA[i]);
+        }
+        if (i < arrayB.length) {
+            newArr.push(arrayB[i]);
+        }
+        i++
+    }
+    return newArr;
+}
+
+export function interleaveArrays(arrayA, arrayB) {
+    var newArr = [];
+    for (var i = 0; i < arrayA.length || i < arrayB.length; i++) {
+        if (i < arrayA.length) {
+            newArr.push(arrayA[i]);
+        }
+        if (i < arrayB.length) {
+            newArr.push(arrayB[i]);
+        }
+    }
+    return newArr;
+}

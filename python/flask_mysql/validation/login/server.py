@@ -1,5 +1,5 @@
 from flask_app import app
-from flask_app.controllers import #insert controllername(s)
+from flask_app.controllers import users
 #may have many controllers name(s)_controller, name2(s)_controller
 
 

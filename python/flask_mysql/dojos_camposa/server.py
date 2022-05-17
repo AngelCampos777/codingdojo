@@ -1,5 +1,5 @@
 from flask_app import app
-from flask_app.controllers import #insert controllername(s)
+from flask_app.controllers import dojos, ninjas
 #may have many controllers name(s)_controller
 
 
