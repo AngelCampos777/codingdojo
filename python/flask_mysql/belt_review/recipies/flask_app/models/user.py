@@ -1,6 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash
 import re
+from flask_app.models import recipe
 #from models import models as needed importing class from models
 #from models import Friend
 #class and quieries
@@ -47,14 +48,34 @@ class User:
     @classmethod
     def create_user(cls, data):
         query = "INSERT INTO users (first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s);"
-        result = connectToMySQL("login").query_db(query, data)
+        result = connectToMySQL("recipies").query_db(query, data)
         return result #returns id of what you inserted
     @classmethod
     def get_user_by_email(cls, data):
         query = "SELECT * FROM users WHERE email = %(email)s;"
-        results = connectToMySQL("login").query_db(query, data)
+        results = connectToMySQL("recipies").query_db(query, data)
         #any time we get data from a db it needs to be an instance of a class
         users = []
         for item in results:
             users.append(User(item))
         return users
+
+    @classmethod
+    def get_user_recipies(cls, data):
+        query = "SELECT * FROM users LEFT JOIN recipies ON users.id = recipies.user_id WHERE users.id = %(id)s;"
+        results = connectToMySQL('recipies').query_db(query, data)
+        user = cls(results[0])
+        for row in results:
+            a_recipe = {
+            "id" : row['recipies.id'],
+            "name" : row['name'],
+            "description" : row['description'],
+            "instructions" : row['instructions'],
+            "created" : row['created'],
+            "created_at" : row['recipies.created_at'],
+            "updated_at" : row['recipies.updated_at'],
+            "user_id" : row['user_id']
+            }
+            this_recipe = recipe.Recipe(a_recipe)
+            user.recipes.append(this_recipe)
+        return user

@@ -1,6 +1,7 @@
 from flask_app import app
 from flask import render_template, request, redirect, session, flash
 from flask_app.models.user import User
+from flask_app.models.recipe import Recipe
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 # routes
@@ -41,14 +42,17 @@ def login_user():
     #pull data into session
     session['user_id'] = user.id
     session['first_name'] = user.first_name
-    return redirect("/success")
+    return redirect("/dashboard")
 
-@app.route("/success")
+@app.route("/dashboard")
 def success():
     if 'user_id' not in session:
         flash("You must be logged in to view this.")
         return redirect("/")
-    return render_template("success.html")
+    all_recipies = Recipe.get_user_recipies()
+    user = session['user_id']
+    print(user)
+    return render_template("dashboard.html",all_recipies = all_recipies, user = user)
 
 @app.route("/logout")
 def logout():

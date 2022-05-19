@@ -22,7 +22,6 @@
             </tr>
         </thead>
         <tbody>
-            {% for user in users %}
             <tr>
                 <td>{{user.first_name}}</td>
                 <td>{{user.last_name}}</td>
@@ -30,11 +29,10 @@
                 <td>{{user.created_at}}</td>
                 <td>{{user.updated_at}}</td>
             </tr>
-            {% endfor %}
         </tbody>
     </table>
-    <a href="/delete_user/{{ id }}">Delete</a>
-    <a href="/edit_user/{{ id }}">Edit</a>
+    <a href="/delete_user/{{ user.id }}">Delete</a>
+    <a href="/edit_user/{{ user.id }}">Edit</a>
     <a href="/view_users" class="btn btn-info float-end mt-2">Home</a>
 </body>
 </html>

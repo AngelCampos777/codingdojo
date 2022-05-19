@@ -29,10 +29,7 @@ class User:
     def get_user(cls, data):
         query = "SELECT * FROM users WHERE id = %(id)s;"
         results = connectToMySQL('mydb').query_db(query, data)
-        users = []
-        for user in results:
-            users.append(cls(user))
-        return users
+        return cls(results[0])
 
     @classmethod
     def edit_user(cls, data):

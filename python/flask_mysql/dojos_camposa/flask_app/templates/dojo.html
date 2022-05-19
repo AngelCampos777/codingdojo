@@ -21,6 +21,7 @@
                     <th scope="col">age</th>
                     <th scope="col">Created At:</th>
                     <th scope="col">Last Updated On:</th>
+                    <th scope="col">Actions:</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,7 @@
                     <td>{{ninja.age}}</td>
                     <td>{{ninja.created_at}}</td>
                     <td>{{ninja.updated_at}}</td>
+                    <td><a href="/edit_ninja/{{ninja.id}}">Edit</a> <a href="/delete_ninja/{{ninja.id}}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -11,18 +11,16 @@
 </head>
 <body>
     <h2>Edit a User</h2>
-    <form action="/update_user/{{ id }}" method="post">
-        <input type="hidden" name="id" value ="{{ id }}">
-        {% for user in users %}
+    <form action="/update_user/{{ user.id }}" method="post">
+        <input type="hidden" name="id" value ="{{ user.id }}">
         <label for="first_name">First Name:</label>
-        <input type="text" name="first_name" value="{{user['first_name']}}">
+        <input type="text" name="first_name" value="{{user.first_name}}">
 
         <label for="last_name">Last Name:</label>
-        <input type="text" name="last_name" value="{{ user['last_name'] }}">
+        <input type="text" name="last_name" value="{{ user.last_name }}">
 
         <label for="email">Email:</label>
-        <input type="text" name="email" value="{{ user['email'] }}">
-        {% endfor %}
+        <input type="text" name="email" value="{{ user.email }}">
         <input type="submit" value="Edit User" class="btn btn-warning">
     </form>
     <a href="/view_users" class="btn btn-info float-end mt-2">Home</a>

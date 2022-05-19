@@ -2,6 +2,10 @@ from flask import render_template, request, redirect, session
 from flask_app import app
 from flask_app.models.user import User
 # routes
+@app.route("/")
+def start():
+    return redirect("/view_users")
+
 @app.route("/users")
 def index():
     return render_template("users.html")
@@ -26,16 +30,16 @@ def display_user(id):
     data = {
         "id" : id
     }
-    users = User.get_user(data)
-    return render_template("view_user.html", users = users, id = id)
+    user = User.get_user(data)
+    return render_template("view_user.html", user = user, id = id)
 
 @app.route("/edit_user/<int:id>")
 def edit_user(id):
     data = {
         "id" : id
     }
-    users = User.get_user(data)
-    return render_template("/edit_user.html", users = users, id = id)
+    user = User.get_user(data)
+    return render_template("/edit_user.html", user = user, id = id)
 
 @app.route("/update_user/<int:id>", methods = ["POST"])
 def update_user(id):
