@@ -1,0 +1,15 @@
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\bin\Debug\net6.0\Fund1.exe
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\bin\Debug\net6.0\Fund1.deps.json
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\bin\Debug\net6.0\Fund1.runtimeconfig.json
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\bin\Debug\net6.0\Fund1.dll
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\bin\Debug\net6.0\Fund1.pdb
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.csproj.AssemblyReference.cache
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.AssemblyInfoInputs.cache
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.AssemblyInfo.cs
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.csproj.CoreCompileInputs.cache
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.dll
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\refint\Fund1.dll
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.pdb
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\Fund1.genruntimeconfig.cache
+C:\Users\th3lo\Coding\C#\FirstCSharp\Fund1\obj\Debug\net6.0\ref\Fund1.dll
