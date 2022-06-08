@@ -90,6 +90,54 @@ class SLL {
         }
         console.log(sum/length);
 }
+
+// is number in sll, return bool, iterative, recursive
+    containsIt(num){
+        if(this.isEmpty()){
+            return false;
+        }
+        var runner = this.head;
+        while(runner){
+            if(runner.data == num){
+                return true;
+            }
+                runner = runner.next;
+        }
+        return false;
+    }
+
+    containsRec(num, runner = this.head){
+        if(this.isEmpty()){
+            return false;
+        }
+        if(!runner.next){
+            return false;
+        }
+        if(num == runner.data){
+            return true;
+        }
+        runner = runner.next;
+        return this.containsRec(num, runner)
+    }
+// Remove number at back and return
+    removeTail(){
+        let runner = this.head;
+        if(this.isEmpty()){
+            return "There are no nodes in this list."
+        }
+        if(!runner.next){
+            let temp = new Node(this.head.data);
+            this.removeHead();
+            return temp;
+        }
+
+        while(runner.next.next){
+            runner = runner.next;
+        }
+        let temp = new Node(runner.next.data);
+        runner.next = null;
+        return temp;
+    }
 }
 
 
@@ -118,8 +166,14 @@ sll.insertAtBack(1);
 sll.print();
 
 
-sll.insertAtFront(6);
+// sll.insertAtFront(6);
+// sll.print();
+// sll.removeHead();
+// sll.print();
+// sll.average()
+console.log(sll.containsIt(1));
+console.log(sll.containsIt(0));
+console.log(sll.containsRec(1));
+console.log(sll.containsRec(0));
+sll.removeTail();
 sll.print();
-sll.removeHead();
-sll.print();
-sll.average()

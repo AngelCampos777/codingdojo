@@ -24,4 +24,8 @@ class Animal
         isFriendly = isFr;
     }
     // methods functions what they can do
+    public void makeNoise(string sound)
+    {
+        Console.WriteLine(sound);
+    }
 }

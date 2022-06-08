@@ -1,0 +1,15 @@
+C:\Users\th3lo\Coding\C#\WNS\bin\Debug\net6.0\WNS.exe
+C:\Users\th3lo\Coding\C#\WNS\bin\Debug\net6.0\WNS.deps.json
+C:\Users\th3lo\Coding\C#\WNS\bin\Debug\net6.0\WNS.runtimeconfig.json
+C:\Users\th3lo\Coding\C#\WNS\bin\Debug\net6.0\WNS.dll
+C:\Users\th3lo\Coding\C#\WNS\bin\Debug\net6.0\WNS.pdb
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.csproj.AssemblyReference.cache
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.AssemblyInfoInputs.cache
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.AssemblyInfo.cs
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.csproj.CoreCompileInputs.cache
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.dll
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\refint\WNS.dll
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.pdb
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\WNS.genruntimeconfig.cache
+C:\Users\th3lo\Coding\C#\WNS\obj\Debug\net6.0\ref\WNS.dll

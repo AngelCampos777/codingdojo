@@ -1,0 +1,17 @@
+﻿Human johnCena = new Human("John Cena", 10, 10, 11, 100);
+Wizard paco  = new Wizard("Paco");
+Ninja greg  = new Ninja("Greg");
+Samurai jack  = new Samurai("Jack");
+Wizard SteveHarveee = new Wizard("SteveHarveee", 5, 15, 5, 100);
+// Console.WriteLine(johnCena.Attack(paco));
+Console.WriteLine(SteveHarveee.Health);
+Console.WriteLine(greg.Dexterity);
+Console.WriteLine(jack.Health);
+// Console.WriteLine(paco.Attack(johnCena));
+// paco.Heal(paco);
+greg.Steal(jack);
+Console.WriteLine(greg.Health);
+Console.WriteLine(jack.Health);
+jack.Meditate();
+Console.WriteLine(jack.Health);
+Console.WriteLine(greg.Attack(SteveHarveee));
