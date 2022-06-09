@@ -100,7 +100,21 @@ int[] arr = {2, 5, 3, 1, 2, 7, 7, 7, 7, 7};
 // {
 //     Console.WriteLine(list);
 // }
+
 //8 greater than y
+// static int GreaterThanY(int[] numbers, int y)
+// {
+//     int count = 0;
+//     for(int i = 0; i < numbers.Length; i++)
+//     {
+//         if(numbers[i] > y)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// Console.WriteLine(GreaterThanY(arr,6));
 
 //9 square the values
 // static int[] SquaredArray(int[] numbers)
@@ -125,3 +139,82 @@ int[] arr = {2, 5, 3, 1, 2, 7, 7, 7, 7, 7};
 // {
 //     Console.WriteLine(num);
 // }
+
+// 10 eliminate negitive nums
+// static void EliminateNegatives(int[] numbers)
+// {
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         if(numbers[i] < 0)
+//         {
+//             numbers[i] = 0;
+//         }
+//         Console.WriteLine(numbers[i]);
+//     }
+// }
+// EliminateNegatives(numArr3);
+
+//11 min,max,avg
+// static void MinMaxAverage(int[] numbers)
+// {
+//     int min = 0;
+//     int max = 0;
+//     int sum = 0;
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         sum = sum + numbers[i];
+//         if(numbers[i] >= max)
+//         {
+//             max = numbers[i];
+//         }
+//         if(numbers[i] <= min)
+//         {
+//             min = numbers[i];
+//         }
+//     }
+//     Console.WriteLine($"min: {min}, max: {max}, average: {sum/numbers.Length}");
+// }
+// MinMaxAverage(numArr1);
+// MinMaxAverage(numArr2);
+// MinMaxAverage(numArr3);
+
+//12 shifting arr vals
+// static void ShiftValues(int[] numbers)
+// {
+//     for (int i = 0; i < numbers.Length - 1; i++)
+//     {
+//         numbers[i] = numbers[i+1];
+//     }
+//     numbers[numbers.Length - 1] = 0;
+
+//     foreach(int x in numbers)
+//     {
+//         Console.WriteLine(x);
+//     }
+// }
+
+// ShiftValues(numArr1);
+// ShiftValues(numArr2);
+// ShiftValues(numArr3);
+
+//13 number to str
+// static void NumToString(int[] numbers)
+// {
+//     object[] box = new object[numbers.Length];
+//     for (int i = 0; i < numbers.Length - 1; i++)
+//     {
+//         if(numbers[i] < 0)
+//         {
+//             box[i] = "dojo";
+//         }
+//         else
+//         {
+//             box[i] = numbers[i];
+//         }
+//     }
+//     foreach(object x in box)
+//     {
+//         Console.WriteLine(x);
+//     }
+// }
+// NumToString(numArr3);

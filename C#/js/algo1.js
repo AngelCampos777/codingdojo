@@ -138,7 +138,121 @@ class SLL {
         runner.next = null;
         return temp;
     }
+
+    // Return (don't remove) the second to last value in your list (ex: if your list is 2, 5, 6, 3, 9, you should return 3)
+    secondToLast(){
+        let runner = this.head;
+        if(this.isEmpty()){
+            return false;
+        }
+        if(runner.next == null){
+            return false;
+        }
+        while(runner.next.next != null){
+            runner = runner.next;
+        }
+        return runner.data;
+    }
+    
+    // Given a value, remove that value from the list and return true or false whether it was removed
+    removeVals(val){
+        //go through the sll, check the data against some num, remove it if it exists 
+        //and not lose the rest of the list return true if existed false if not
+        let removed = false;
+        let runner = this.head;
+        if(this.isEmpty()){
+            return false;
+        }
+        while(runner){
+            if(this.head.data == val){
+                this.head = this.head.next;
+                runner = this.head;
+                removed = true;
+            }
+            if(runner.next == null){
+                return removed;
+            }
+            if(runner.next.data == val){
+                runner.next = runner.next.next;
+                removed = true;
+            }
+            runner = runner.next;
+        }
+        return removed;
+    }
+
+    // removeValue(val){
+    //     var runner = this.head;
+    //     if (runner.data == val){
+    //         this.removeHead();
+    //         return true;
+    //     }
+    //     let previous;
+    //     while (runner){
+    //         if (runner.data == val){
+    //             previous.next = runner.next;
+    //             this.size--;
+    //             return true;
+    //         }
+    //         previous = runner;
+    //         runner = runner.next;
+    //     }
+    //     return false;
+    // }
+
+    // removeVal(val, runner=this.head, removed=false) {
+    //     if(this.isEmpty()){
+    //         return false;
+    //     }
+    //     while(runner.next){
+    //         if(runner.next.data === val){
+    //             break;
+    //         }
+    //         runner = runner.next;
+    //     }
+    //     if(!runner.next){
+    //         if(runner.data === val){
+    //             this.removeBack();
+    //             return true;
+    //         }
+    //         else{
+    //             return removed;
+    //         }
+    //     }
+    //     let temp = runner.next;
+    //     runner.next = temp.next;
+    //     temp.next = null;
+    //     return this.removeVal(val, runner, true);
+    // }
+    // Note: how would this code look if you only wanted to remove one instance of the value?
+    //How would this code look if you wanted to remove ALL instances of the value? (ie: plan for duplicates)
+    
+    // EXTRA: Given ValueA and ValueB, insert a node with ValueA BEFORE the node containing ValueB (this is called a prepend)
+    //and return true or false whether it was pre-pended
+    prepend(ValA, ValB){
+        let runner = this.head;
+        if(runner.data == ValB){
+            this.insertAtFront(ValA);
+            return true;
+        }
+        if(this.isEmpty()){
+            return false;
+        }
+        while(runner.next){
+            if(runner.next.data == ValB){
+                break;
+            }
+            runner = runner.next;
+        }
+        if(!runner.next){
+            return false;
+        }
+        let temp = runner.next;
+        runner.next = new Node(ValA, temp);
+        return true;
+    }
 }
+
 
 
 var sll = new SLL();
@@ -171,9 +285,13 @@ sll.print();
 // sll.removeHead();
 // sll.print();
 // sll.average()
-console.log(sll.containsIt(1));
-console.log(sll.containsIt(0));
-console.log(sll.containsRec(1));
-console.log(sll.containsRec(0));
-sll.removeTail();
+// console.log(sll.containsIt(1));
+// console.log(sll.containsIt(0));
+// console.log(sll.containsRec(1));
+// console.log(sll.containsRec(0));
+// sll.removeTail();
+// sll.print();
+// console.log(sll.secondToLast());
+// sll.print();
+console.log(sll.removeVals(1));
 sll.print();

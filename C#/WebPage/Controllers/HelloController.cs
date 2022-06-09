@@ -14,11 +14,27 @@ public class HelloController : Controller   //remember inheritance??
     {
         return "Back at it again.";
     }
-        [HttpGet("third/{name}")]
+    [HttpGet("third/{name}")]
     public ViewResult NameRoute(string name)
     {
         ViewBag.Name = name;
         ViewBag.MyArr = new int[5] {1,2,3,4,5};
         return View("Third");
+    }
+
+    [HttpGet("fourth")]
+    public ViewResult Fourth(string name)
+    {
+
+        return View("Fourth");
+    }
+
+    [HttpPost("process")]
+    public RedirectToActionResult Process(string Name, string Species, int Age)
+    {
+        Console.WriteLine($"Name:    {Name}");
+        Console.WriteLine($"Species: {Species}");
+        Console.WriteLine($"Age:     {Age}");
+        return RedirectToAction("Fourth");
     }
 }

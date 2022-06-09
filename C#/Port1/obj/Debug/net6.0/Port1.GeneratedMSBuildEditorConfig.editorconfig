@@ -8,9 +8,21 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Port1
 build_property.RootNamespace = Port1
-build_property.ProjectDir = C:\Users\th3lo\Coding\C#\Port1\
+build_property.ProjectDir = c:\Users\th3lo\Coding\C#\Port1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\th3lo\Coding\C#\Port1
+build_property.MSBuildProjectDirectory = c:\Users\th3lo\Coding\C#\Port1
 build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/th3lo/Coding/C\#/Port1/Views/Home/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/th3lo/Coding/C\#/Port1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/th3lo/Coding/C\#/Port1/Views/Home/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
