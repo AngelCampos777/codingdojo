@@ -7,6 +7,7 @@ public class ProfileController : Controller   //remember inheritance??
     [Route("")]     //associated route string (exclude the leading /)
     public ViewResult Index()
     {
+        ViewBag.CurrentTime = DateTime.Now;
         return View("Index");
     }
     [HttpGet("projects")]
@@ -14,9 +15,16 @@ public class ProfileController : Controller   //remember inheritance??
     {
         return View("Projects");
     }
-        [HttpGet("contact")]
-    public ViewResult Contact()
+    [HttpGet("contacts")]
+    public ViewResult Contacts()
     {
-        return View("Contact");
+        return View("Contacts");
     }
+    [HttpPost("process")]
+    
+    public RedirectToActionResult Process()
+        {
+            return RedirectToAction("Contacts");
+        }
+    
 }

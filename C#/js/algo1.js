@@ -181,24 +181,24 @@ class SLL {
         return removed;
     }
 
-    // removeValue(val){
-    //     var runner = this.head;
-    //     if (runner.data == val){
-    //         this.removeHead();
-    //         return true;
-    //     }
-    //     let previous;
-    //     while (runner){
-    //         if (runner.data == val){
-    //             previous.next = runner.next;
-    //             this.size--;
-    //             return true;
-    //         }
-    //         previous = runner;
-    //         runner = runner.next;
-    //     }
-    //     return false;
-    // }
+    removeValue(val){
+        var runner = this.head;
+        if (runner.data == val){
+            this.removeHead();
+            return true;
+        }
+        let previous;
+        while (runner){
+            if (runner.data == val){
+                previous.next = runner.next;
+                this.size--;
+                return true;
+            }
+            previous = runner;
+            runner = runner.next;
+        }
+        return false;
+    }
 
     // removeVal(val, runner=this.head, removed=false) {
     //     if(this.isEmpty()){
@@ -228,7 +228,7 @@ class SLL {
     //How would this code look if you wanted to remove ALL instances of the value? (ie: plan for duplicates)
     
     // EXTRA: Given ValueA and ValueB, insert a node with ValueA BEFORE the node containing ValueB (this is called a prepend)
-    //and return true or false whether it was pre-pended
+    // and return true or false whether it was pre-pended possible recursion for multiple run throughs
     prepend(ValA, ValB){
         let runner = this.head;
         if(runner.data == ValB){
@@ -248,8 +248,54 @@ class SLL {
             return false;
         }
         let temp = runner.next;
-        runner.next = new Node(ValA, temp);
+        runner.next = new Node(ValA);
+        runner.next.next = temp
         return true;
+    }
+    
+// Given a different singly linked list, concatenate the values of that list onto the back of your own 
+//(ex: if your original list contained 1, 2, 3 and the given list contained 4, 5, 6, you should now have 
+//a list that contains the values 1, 2, 3, 4, 5, 6)
+    concat(addArr){
+    for(var i = 0; i < addArr.length; i++){
+        this.insertAtBack(addArr[i]);
+    }
+    }
+
+// Find the smallest value in your list and move it to the front (ex: if your list looked like this:
+//4, 8, 2, 5, then after the function it should look like this: 2, 4, 8, 5)
+    moveMinToFront(){
+    let min = this.head.data;
+    var  runner = this.head;
+    while(runner){
+        if(runner.data < min){
+            min = runner.data;
+        }
+        runner = runner.next;
+        }
+        this.removeValue(min);
+        this.insertAtFront(min);
+    }
+
+// EXTRA: Given a value, split your list into two lists along that value. Ex: if your original list was 
+//1, 2, 3, 4, 5 and you were given 3, your first list should have 1, 2 and your second list should have 3, 4, 5
+    splitOnVal(val){
+        if(this.containsRec(val)){
+            if(this.head.data == val){
+                return "this returns the same list."
+            }
+            let  runner = this.head;
+            while(runner.next.data != val){
+                runner = runner.next;
+            }
+            console.log(runner.data);
+            const sll2 = new SLL();
+            sll2.head = runner.next;
+            runner.next = null;
+            return sll2;
+        }else{
+        return null;
+        } 
     }
 }
 
@@ -270,9 +316,10 @@ console.log(sll.isEmpty());
 // sll.head.next = node2;
 // sll.head.next.next = node3;
 // sll.head.next.next.next = node4;
-sll.insertAtBack(1);
+sll.insertAtBack(3);
 sll.insertAtBack(9);
 sll.insertAtBack(7);
+sll.insertAtBack(5);
 sll.insertAtBack(1);
 
 
@@ -293,5 +340,18 @@ sll.print();
 // sll.print();
 // console.log(sll.secondToLast());
 // sll.print();
-console.log(sll.removeVals(1));
+// console.log(sll.removeVals(1));
+// sll.print();
+
+// console.log(sll.prepend(2,9));
+// console.log(sll.prepend(2,1));
+// sll.print();
+
+// sll.concat([2,3,4])
+sll.moveMinToFront();
+
+var sll2 = sll.splitOnVal(9);
 sll.print();
+if(sll2 != null){
+    sll2.print();
+}

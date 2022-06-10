@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home |  <a href="/Projects">Projects</a> | <a href="/Contacts">Contacts</a></h1>
+    <h2>About Me:</h2>
+    <p>look at this good boy.</p>
+    <img src="~/images/pup.jpg" alt="pup">
+    <p>Thanks. Here's the date and time:
+        @ViewBag.CurrentTime.ToString("MMMM") @ViewBag.CurrentTime.Day, @ViewBag.CurrentTime.Year
+        @ViewBag.CurrentTime.ToString("h:mm tt")
+    </p>
+</body>
+</html>

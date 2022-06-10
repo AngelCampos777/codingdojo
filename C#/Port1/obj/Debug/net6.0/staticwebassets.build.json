@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "8EKZ9NKkH3E2SqLx2XOu5v1Nc8LIXIJO1SCIv0znTMk=",
+  "Hash": "4XihpnuqARSYdVXUQsYEcts3cQbMFeRcR4g3WsbBy54=",
   "Source": "Port1",
   "BasePath": "_content/Port1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Port1\\wwwroot",
+      "Source": "Port1",
+      "ContentRoot": "C:\\Users\\th3lo\\Coding\\C#\\Port1\\wwwroot\\",
+      "BasePath": "_content/Port1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\th3lo\\Coding\\C#\\Port1\\wwwroot\\images\\pup.jpg",
+      "SourceId": "Port1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\th3lo\\Coding\\C#\\Port1\\wwwroot\\",
+      "BasePath": "_content/Port1",
+      "RelativePath": "images/pup.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pup.jpg"
+    }
+  ]
 }

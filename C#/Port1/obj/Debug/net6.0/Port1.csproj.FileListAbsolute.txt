@@ -19,3 +19,6 @@ C:\Users\th3lo\Coding\C#\Port1\obj\Debug\net6.0\refint\Port1.dll
 C:\Users\th3lo\Coding\C#\Port1\obj\Debug\net6.0\Port1.pdb
 C:\Users\th3lo\Coding\C#\Port1\obj\Debug\net6.0\Port1.genruntimeconfig.cache
 C:\Users\th3lo\Coding\C#\Port1\obj\Debug\net6.0\ref\Port1.dll
+C:\Users\th3lo\Coding\C#\Port1\obj\Debug\net6.0\Port1.RazorAssemblyInfo.cache
+C:\Users\th3lo\Coding\C#\Port1\obj\Debug\net6.0\Port1.RazorAssemblyInfo.cs
+C:\Users\th3lo\Coding\C#\Port1\bin\Debug\net6.0\Port1.staticwebassets.runtime.json

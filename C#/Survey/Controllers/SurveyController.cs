@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc; //service that brings in mvc functionality
 namespace Survey.Controllers;     //be sure to use your own project's namespace!
-public class ThingController : Controller   //remember inheritance??
+public class SurveyController : Controller   //remember inheritance??
 {
     //for each route this controller is to handle:
     [HttpGet]       //type of request
@@ -10,18 +10,19 @@ public class ThingController : Controller   //remember inheritance??
         return View("Index");
     }
         [HttpGet("result")]
-    public ViewResult Result(string name)
+    public ViewResult Result()
     {
 
         return View("Result");
     }
 
     [HttpPost("process")]
-    public RedirectToActionResult Process(string Name, string Species, int Age)
+    public IActionResult Process(string Name, string Location, string Language, string Comments)
     {
-        Console.WriteLine($"Name:    {Name}");
-        Console.WriteLine($"Species: {Species}");
-        Console.WriteLine($"Age:     {Age}");
-        return RedirectToAction("Result");
+        ViewBag.Name = Name;
+        ViewBag.Location = Location;
+        ViewBag.Language = Language;
+        ViewBag.Comments = Comments;
+        return View("Result");
     }
 }
