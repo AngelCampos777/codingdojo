@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Random Passcode (passcode #@Context.Session.GetInt32("Counter"))</h1>
+    <h2>@Context.Session.GetString("Pass")</h2>
+    <a href="/generate" class="btn btn-primary">Generate</a>
+    <a href="/delete" class="btn btn-danger">Reset</a>
+</div>

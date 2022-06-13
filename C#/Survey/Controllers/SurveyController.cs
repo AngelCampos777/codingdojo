@@ -9,7 +9,7 @@ public class SurveyController : Controller   //remember inheritance??
     {
         return View("Index");
     }
-        [HttpGet("result")]
+    [HttpGet("result")]
     public ViewResult Result()
     {
 
