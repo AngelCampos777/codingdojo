@@ -1,0 +1,15 @@
+C:\Users\th3lo\Coding\C#\eruption\bin\Debug\net6.0\eruption.exe
+C:\Users\th3lo\Coding\C#\eruption\bin\Debug\net6.0\eruption.deps.json
+C:\Users\th3lo\Coding\C#\eruption\bin\Debug\net6.0\eruption.runtimeconfig.json
+C:\Users\th3lo\Coding\C#\eruption\bin\Debug\net6.0\eruption.dll
+C:\Users\th3lo\Coding\C#\eruption\bin\Debug\net6.0\eruption.pdb
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.csproj.AssemblyReference.cache
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.AssemblyInfoInputs.cache
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.AssemblyInfo.cs
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.csproj.CoreCompileInputs.cache
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.dll
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\refint\eruption.dll
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.pdb
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\eruption.genruntimeconfig.cache
+C:\Users\th3lo\Coding\C#\eruption\obj\Debug\net6.0\ref\eruption.dll
