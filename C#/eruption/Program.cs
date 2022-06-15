@@ -30,14 +30,15 @@ Console.WriteLine("Hello, World!");
 // PrintEach(highEruptions, "Stratovolcano eruptions.");
 // IEnumerable<Eruption> zEruptions = eruptions.Where(c => c.Volcano == "Z*");
 // PrintEach(zEruptions, "z eruptions.");
-// IEnumerable <Eruption> zEruptions = eruptions.Where(c => c.ElevationInMeters);
-// PrintEach(zEruptions, "z eruptions.").Max();??
-// IEnumerable <Eruption> zEruptions = eruptions.Where(c => c.ElevationInMeters);
-// PrintEach(zEruptions, "z eruptions.").Max();??
+
+// int Elevation = eruptions.Max(c => c.ElevationInMeters);
+// Console.WriteLine(Elevation);
+// Eruption firstNZEruption = eruptions.First(d => d.ElevationInMeters == Elevation);
+// Console.WriteLine(firstNZEruption);
 // IEnumerable <Eruption> alphEruptions = eruptions.OrderBy(c => c.Volcano);
 // PrintEach(alphEruptions, "alph eruptions.");
-IEnumerable <Eruption> earlyAlphEruptions = eruptions.Where(c => c.Year <= 1000).OrderBy(c => c.Volcano);
-PrintEach(earlyAlphEruptions, "earlyAlph eruptions.");
+// IEnumerable <Eruption> earlyAlphEruptions = eruptions.Where(c => c.Year <= 1000).OrderBy(c => c.Volcano);
+// PrintEach(earlyAlphEruptions, "earlyAlph eruptions.");
 
 
 // Helper method to print each item in a List or IEnumerable.This should remain at the bottom of your class!

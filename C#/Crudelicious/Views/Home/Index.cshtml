@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Dish
+<div class="text-center">
+    <form action="/dish/add" method="post">
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Chef">Chef</label>
+            <input asp-for="Chef">
+            <span asp-validation-for="Chef" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Tastiness">Tastiness</label>
+            <select asp-for="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Calories">Calories</label>
+            <input type="number" asp-for="Calories">
+            <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea asp-for="Description" rows="10" cols="30"></textarea><br>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+    </form>
+    <h1>All recipies</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Chef</th>
+            <th>Tastiness</th>
+            <th>Calories</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        @foreach(Dish d in ViewBag.AllDishes)
+        {
+            <tr>
+                <td>@d.Name</td>
+                <td>@d.Chef</td>
+                <td>@d.Tastiness</td>
+                <td>@d.Calories</td>
+                <td>@d.Description</td>
+                <td><a href="/dish/edit/@d.DishId">Edit</a> | <a href="/dish/delete/@d.DishId">Delete</a></td>
+            </tr>
+        }
+</div>

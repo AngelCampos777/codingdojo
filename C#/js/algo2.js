@@ -38,6 +38,62 @@ class BST {
         }
         return runner.data;
     }
+    ContainsIt(num){
+        var runner = this.root;
+        if(this.isEmpty()){
+            return false;
+        }
+        if(runner.left == null && runner.right == null){
+            if(runner.data == num){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        while(runner){
+            if(runner.data == num){
+                return true;
+            }
+            else if(runner.data > num){
+                runner = runner.left;
+            }
+            else if(runner.data < num){
+                runner = runner.right;
+            }
+        }
+        return false;
+    }
+
+    ContainsRec(num, runner = this.root){
+        if(this.isEmpty()){
+            return false;
+        }
+        if(runner.left == null && runner.right == null){
+            if(runner.data == num){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        while(runner){
+            if(runner.data == num){
+                return true;
+            }
+            else if(runner.data > num){
+                return this.ContainsRec(num, runner.left);
+            }
+            else if(runner.data < num){
+                return this.ContainsRec(num, runner.right);
+            }
+        }
+    }
+
+    range(){
+        let max = this.max();
+        let min = this.min();
+        let range = max - min;
+        return range;
+    }
 }
 
 
@@ -56,3 +112,8 @@ myBST.root.right = node3;
 console.log(myBST);
 console.log("our min val is: " + myBST.min());
 console.log("our max val is: " + myBST.max());
+// console.log(myBST.ContainsIt(20));
+// console.log(myBST.ContainsIt(80));
+// console.log(myBST.ContainsRec(50));
+// console.log(myBST.ContainsRec(30));
+console.log(myBST.range());
