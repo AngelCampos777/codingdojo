@@ -28,10 +28,17 @@ public class HomeController : Controller
             _context.SaveChanges();
             return RedirectToAction("Index");
         } else {
+            ViewBag.AllDishes = _context.Dishes.OrderByDescending(a => a.UpdatedAt).ToList();
             return View("index");
         }
     }
-    //get one??
+    [HttpGet("/dish/{DishId}")]
+    public IActionResult RenderDish(int DishId)
+    {
+        Dish singleDish = _context.Dishes.FirstOrDefault(a => a.DishId == DishId);
+        // ViewBag.singleDish = _context.Dishes.FirstOrDefault(a => a.DishId == DishId);
+        return View(singleDish);
+    }
     [HttpGet("/dish/edit/{DishId}")]
     public IActionResult EditDish(int DishId)
     {

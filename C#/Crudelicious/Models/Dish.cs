@@ -13,7 +13,7 @@ public class Dish
     public string Chef {get;set;}
     public int Tastiness {get;set;}
     [Required]
-    //greater than 0
+    [Range(0, double.MaxValue)]
     public int Calories {get;set;}
     [Required]
     [MinLength(10)]
