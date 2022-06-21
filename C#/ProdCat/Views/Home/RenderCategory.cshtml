@@ -1,0 +1,7 @@
+@model Association
+<h1>@ViewBag.singleCategory.Name</h1>
+<h2>other things in this category</h2>
+@foreach (Association a in ViewBag.singleCategory.ProductsInCategory)
+{
+    <h3>@a.Product.Name</h3>
+}

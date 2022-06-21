@@ -297,6 +297,28 @@ class SLL {
         return null;
         } 
     }
+    // Reverse
+    // Reverse a singly linked list. If your original list is 1 -> 2 -> 3 -> 4 your reversed list should be 
+    // 4 -> 3 -> 2 -> 1
+    reverse(sllTemp = new SLL(), runner = this.head){ 
+        if(this.isEmpty()){
+            return sllTemp;
+        }
+        if(runner.next != null){
+            return this.reverse(sllTemp, runner = runner.next);
+        }
+        sllTemp.insertAtBack(runner);
+        this.removeTail();
+        return this.reverse(sllTemp);
+    }
+    
+    // HasLoop
+    // Return true or false whether your SLL has a loop (meaning the last value points back in to the list 
+    // and creates an infinite loop)
+
+    
+    // EXTRA: Remove Negatives
+    // Remove all negative values from your singly linked list
 }
 
 
@@ -306,9 +328,9 @@ var node1 = new Node(5);
 var node2 = new Node(7);
 var node3 = new Node(9);
 var node4 = new Node(1);
-console.log(sll.isEmpty());
+// console.log(sll.isEmpty());
 // sll.head = node1;
-console.log(sll.isEmpty());
+// console.log(sll.isEmpty());
 // Remember the head is a pointer
 // The pointer is pointing at a node
 // That node has a data and a next value
@@ -321,8 +343,8 @@ sll.insertAtBack(9);
 sll.insertAtBack(7);
 sll.insertAtBack(5);
 sll.insertAtBack(1);
-
-
+sll.print();
+sll.reverse();
 // console.log(sll);
 sll.print();
 
@@ -348,10 +370,10 @@ sll.print();
 // sll.print();
 
 // sll.concat([2,3,4])
-sll.moveMinToFront();
+// sll.moveMinToFront();
 
-var sll2 = sll.splitOnVal(9);
-sll.print();
-if(sll2 != null){
-    sll2.print();
-}
+// var sll2 = sll.splitOnVal(9);
+// sll.print();
+// if(sll2 != null){
+//     sll2.print();
+// }

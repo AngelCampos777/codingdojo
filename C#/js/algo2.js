@@ -235,22 +235,55 @@ class BST {
         let runner = this.root;
         while(stack.length || runner){
             while(runner){
+                //push val into result arr
                 result.push(runner.data);
+                //push node into tracking arr
                 stack.push(runner);
+                //increment runner left
                 runner = runner.left;
             }
+            //pop last node off stack and increment right
             runner = stack.pop();
             runner = runner.right;
         }
         return result;
     }
-
+    toArrPreOrder(node = this.root, vals = []){
+        if(node){
+            //pre current in order swap 1,2 post swap 1,3
+            vals.push(node.data);
+            this.toArrPreOrder(node.left, vals);
+            this.toArrPreOrder(node.right, vals);
+        }
+    }
 
 // BONUS: Depth First Search Inorder
 // Now use your skills to return an array that contains all the values using DFS Inorder. 
 // Inorder: [left][root][right] -> for each node, visit the left subtree, then read the 
 // data of the node, then visit the right subtree
 // Should get back [4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90]
+    depthInOrder(runner = this.root, arr = []){
+        //if bst is empty return empty arr
+        if(!runner){
+            return arr;
+        }
+        if(!runner.left && !runner.right){
+            arr.push(runner.data);
+            return;
+        }
+        if(runner.left){
+            this.depthInOrder(runner.left, arr);
+            arr.push(runner.data);
+        }
+        if(runner.right && !runner.left){
+            this.depthInOrder(runner.data);
+            arr.push(runner.right, arr);
+        }
+        else{
+            this.depthInOrder(runer.right,arr);
+        }
+        return arr;
+    }
 }
 
 

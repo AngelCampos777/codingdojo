@@ -12,7 +12,8 @@ public class Chef
     [Required]
     [MinLength(2)]
     public string Lastname {get;set;}
-    public DateOnly DateOfBirth {get;set;}
+    [DataType(DataType.Date)]
+    public DateTime DateOfBirth {get;set;}
     public DateTime CreatedAt {get;set;} = DateTime.Now;
     public DateTime UpdatedAt {get;set;} = DateTime.Now;
     public List<Dish> CreatedDishes {get;set;} = new List<Dish>();

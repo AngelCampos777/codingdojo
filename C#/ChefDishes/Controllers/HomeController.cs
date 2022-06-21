@@ -18,7 +18,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.AllChefs = _context.Chefs.ToList();
+        ViewBag.AllChefs = _context.Chefs.Include(a => a.CreatedDishes).ToList();
         return View();
     }
     [HttpGet("addChef")]

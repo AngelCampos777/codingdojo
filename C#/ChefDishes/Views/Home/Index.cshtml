@@ -16,8 +16,8 @@
         {
             <tr>
                 <td>@c.Firstname @c.Lastname</td>
-                <td>@c.DateOfBirth</td>
-                <td></td>
+                <td>@c.DateOfBirth.ToString("MMMM dd yyyy")</td>
+                <td>@c.CreatedDishes.Count</td>
             </tr>
         }
 </div>
