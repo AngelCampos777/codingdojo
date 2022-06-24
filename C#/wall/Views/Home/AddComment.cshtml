@@ -1,0 +1,13 @@
+@model Comment
+<form action="/message/add"  method="post">
+        <div class="form-group">
+            <textarea asp-for="commentText" rows="5" cols="150"></textarea><br>
+            <span asp-validation-for="commentText" class="text-danger"></span>
+        </div>
+        <div>
+            <input type="hidden" name="MessageId" value="@ViewBag.MessageId">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Post" class="btn btn-success">
+        </div>
+</form>

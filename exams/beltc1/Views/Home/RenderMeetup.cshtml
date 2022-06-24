@@ -1,0 +1,23 @@
+@model Meetup
+<h1>@Model.Name</h1>
+<h1>Planner: @Model.Planner.Name</h1>
+<h1>Description: @Model.Description</h1>
+<h1>Participant list: </h1>
+@foreach (Participant g in Model.Attendees)
+{
+    <h1>@g.Attending.Name</h1>
+}
+
+
+<a href="/" class="btn btn-danger">Log out</a>
+<a href="/Dashboard" class="btn btn-primary">Home</a>
+@if(Model.UserId == @Context.Session.GetInt32("UserId"))
+{
+    <a href="/Meetup/Delete/@Model.MeetupId" class="btn btn-danger">Delete</a>
+} else {
+    if(@Model.Attendees.Any(u => u.UserId == @Context.Session.GetInt32("UserId")))
+    { }else{
+        <a href="/Meetup/Join/@Model.MeetupId" class="btn btn-success">Join</a>
+    }
+}
+

@@ -1,0 +1,28 @@
+@model Wedding
+<h1>Plan your wedding</h1>
+<a href="/" class="btn btn-danger">Log out</a>
+<a href="/Dashboard" class="btn btn-primary">Home</a>
+<form action="/wedding/add"  method="post">
+        <div class="form-group">
+            <label for="WedderOne">Wedder One</label>
+            <input asp-for="WedderOne" class="form-control">
+            <span asp-validation-for="WedderOne" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="WedderTwo">Wedder Two</label>
+            <input asp-for="WedderTwo" class="form-control">
+            <span asp-validation-for="WedderTwo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="date" asp-for="Date" class="form-control" value="2022-06-22" min="2022-06-22" max="2035-12-31">
+        </div>
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <input asp-for="Address" class="form-control">
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Register" class="btn btn-primary">
+        </div>
+</form>

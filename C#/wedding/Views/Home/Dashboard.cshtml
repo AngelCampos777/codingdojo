@@ -1,0 +1,35 @@
+@using wedding.Models
+@model List<Wedding>
+<h1>success</h1>
+<a href="/" class="btn btn-danger">Log out</a>
+    <h2>Upcoming events</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </tr>
+        @foreach (Wedding w in ViewBag.AllWeddings)
+        {
+            <tr>
+                <td><a href="/Wedding/@w.WeddingId">@w.WedderOne & @w.WedderTwo</td>
+                <td>@w.Date.ToString("MMMM dd yyyy")</td>
+                <td>@w.Attendees.Count</td>
+                <td>@if(w.UserId == ViewBag.LoggedIn.UserId)
+                    {
+                        <a href="/Wedding/delete/@w.WeddingId">Delete</a>
+                    }
+                    else if(w.Attendees.Any(u => u.UserId == ViewBag.LoggedIn.UserId))
+                    {
+                        <a href="/Wedding/Unrsvp/@w.WeddingId">Un-RSVP</a>
+                    }
+                    else
+                    {
+                        <a href="/Wedding/Rsvp/@w.WeddingId">RSVP</a>
+                    }
+                </td>
+            </tr>
+        }
+
+<a href="/AddWedding" class="btn btn-primary">New Wedding</a>

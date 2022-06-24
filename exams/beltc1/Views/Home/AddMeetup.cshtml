@@ -1,0 +1,34 @@
+@model Meetup
+<h1>Plan your Meetup</h1>
+<a href="/" class="btn btn-danger">Log out</a>
+<a href="/Dashboard" class="btn btn-primary">Home</a>
+<form action="/meetup/add"  method="post">
+        <div class="form-group">
+            <label for="Name">Title: </label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Date">Date & Time: </label>
+            <input type="datetime-local" asp-for="Date" class="form-control" value="2022-06-24T12:00" min="2022-06-25T00:00" max="2035-12-31T00:00">
+        </div>
+        <div class="form-group">
+            <label for="durationVal">Duration: </label>
+            <input type="number" asp-for="durationVal" class="col-1">
+            <span> </span>
+            <select asp-for="Duration" class="col-1">
+                <option value="Minutes">Minutes</option>
+                <option value="Hours">Hours</option>
+                <option value="Days">Days</option>
+            </select>
+            <span asp-validation-for="durationVal" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Description">Description: </label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary">
+        </div>
+</form>

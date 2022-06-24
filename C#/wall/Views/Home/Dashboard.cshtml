@@ -1,0 +1,47 @@
+@model IndexViewModel
+
+<h1>Welcome, @ViewBag.LoggedIn.Firstname</h1>
+<a href="/" class="btn btn-danger">Log out</a>
+<h1>Post a Message</h1>
+<form action="/message/add"  method="post">
+        <div class="form-group">
+            <textarea asp-for="newMessage.messageText" rows="7" cols="150"></textarea><br>
+            <span asp-validation-for="newMessage.messageText" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Post" class="btn btn-primary">
+        </div>
+</form>
+
+<h1>Here's What People Are Thinking</h1>
+<div>
+    @foreach (Message m in ViewBag.AllMessages)
+    {
+        <h1>@m.Poster.Firstname @m.Poster.Lastname - @m.CreatedAt </h1>
+        <div class="messageBox">
+            @m.messageText
+            @foreach (Comment c in m.Replies)
+            {
+                <h4>@c.UserWhoCommented.Firstname Says: @c.commentText</h4>
+            }
+        </div>
+        @if(m.Poster.UserId != ViewBag.LoggedIn.UserId)
+        {
+        <div class="commentBox">
+            <form action="/comment/add"  method="post">
+                    <div class="form-group">
+                        <textarea asp-for="newComment.commentText" rows="5" cols="150"></textarea><br>
+                        <span asp-validation-for="newComment.commentText" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <input type="hidden" asp-for="newComment.MessageId" value="@m.MessageId">
+                        <input type="hidden" asp-for="newComment.UserId" value='@Context.Session.GetInt32("UserId")'>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Post" class="btn btn-success">
+                    </div>
+            </form>
+        </div>
+        }
+    }
+</div>

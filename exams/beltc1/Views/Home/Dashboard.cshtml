@@ -1,0 +1,36 @@
+<h1>Welcome, @ViewBag.LoggedIn.Name</h1>
+<a href="/" class="btn btn-danger">Log out</a>
+    <h2>Upcoming events</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Event</th>
+            <th>Date & Time</th>
+            <th>Duration</th>
+            <th>Planner</th>
+            <th>Participants</th>
+            <th>Action</th>
+        </tr>
+        @foreach (Meetup w in ViewBag.AllMeetups)
+        {
+            <tr>
+                <td><a href="/Meetup/@w.MeetupId">@w.Name</a></td>
+                <td>@w.Date.ToString("MMMM dd yyyy hh:mm tt")</td>
+                <td>@w.durationVal @w.Duration</td>
+                <td>@w.Planner.Name</td>
+                <td>@w.Attendees.Count</td>
+                <td>@if(w.UserId == ViewBag.LoggedIn.UserId)
+                    {
+                        <a href="/Meetup/delete/@w.MeetupId">Delete</a>
+                    }
+                    else if(w.Attendees.Any(u => u.UserId == ViewBag.LoggedIn.UserId))
+                    {
+                        <a href="/Meetup/Bail/@w.MeetupId">Bail</a>
+                    }
+                    else
+                    {
+                        <a href="/Meetup/Join/@w.MeetupId">Join</a>
+                    }
+                </td>
+            </tr>
+        }
+<a href="/AddMeetup" class="btn btn-primary">New Meetup</a>
