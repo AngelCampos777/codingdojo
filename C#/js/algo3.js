@@ -17,7 +17,7 @@ class DLL {
     isEmpty() {
         // If the head is pointing at null there is nothing in our sll
         if(this.head == null) {
-            // yes, the sll is empty
+            // yes, the dll is empty
             return true;
         } else {
             return false;

@@ -1,0 +1,53 @@
+@model Comment
+<div class="content">
+    <img src="https://placedog.net/1000?random" alt="dog banner" class="dogBanner">
+    <h2 class="textColor1 inside">Contact Us</h2>
+</div>
+<section class="text-center warmBg">
+    <p class="pT">We do not currently have any set public viewing hours.  Our adoptables can be viewed at our adoption events or by making an appointment through e-mail.</p>
+    <p>For questions about adopting, please e-mail: <span><a href="#">hopefultailsadoptions@outlook.com</a></span></p>
+    <p>For questions about fostering, please e-mail: <span><a href="#"> hopefultailsfostering@gmail.com</a></span></p>
+    <p>For questions about volunteering, please e-mail: <span><a href="#"> hopefultailsvolunteers@outlook.com</a></span></p>
+    <p>For other questions, please e-mail: <span><a href="#"> hopefultails@outlook.com</a></span></p>
+
+    <p>Telephone: (779) 206-2132</p>
+    <p>Voice-mail is checked once daily.</p>
+    <p>The best way to get a hold us us is through an e-mail.  E-mails are checked multiple times daily.</p>
+    <p>Follow us on social media</p>
+    <div>
+        <a href="https://www.facebook.com/hopefultails/"><img src="~/images/facebook-16.ico" alt="facebook icon"></a>
+        <a href="https://www.instagram.com/hopefultails_animalrescue/"><img src="~/images/instagram-6-16.ico" alt="instagram icon"></a>
+    <div>
+</section>
+
+<div class="comment text-center">
+    <form action="/Comment" method="post">
+            <div class="form-group">
+                <label for="Firstname">First name</label>
+                <input asp-for="Firstname"  class="form-control">
+                <span asp-validation-for="Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Lastname">Last name</label>
+                <input asp-for="Lastname"  class="form-control">
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input asp-for="Email"  class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Phone">Phone Number:</label>
+                <input type="PhoneNumber" name="Phone"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Opinion">Comments</label><br>
+                <textarea asp-for="Opinion" style="height: 300px" class="form-control"></textarea><br>
+                <span asp-validation-for="Opinion" class="text-danger"></span>
+            </div>
+            <div>
+                <input type="submit" class="btn-new">
+            </div>
+    </form>
+</div>

@@ -1,0 +1,112 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+p {
+  font-size: larger;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.warmBg {
+  background-color: #F1B766;
+}
+body {
+  margin-top: -10px;
+  margin-bottom: 250px;
+}
+.textColor1 {
+  color: rgb(36,214,226);
+  -webkit-text-stroke: 1px rgb(51,55,69);
+  font-weight: bolder;
+}
+.gunmetal {
+  background-color: #333745;
+}
+.short {
+  line-height: 30px;
+}
+.gallery {
+  height: 300px;
+  width: 300px;
+  border-radius: 50px;
+  border: 1px solid white;
+  filter: drop-shadow(0 0 .5rem white);
+}
+img.gallery {
+  object-fit: cover;
+}
+.fb {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: center;
+}
+.doglink {
+  /* border: 1px solid magenta; */
+  margin-top: 10px;
+  color: white;
+  -webkit-text-stroke: 1px rgb(51,55,69);
+  font-weight: bolder;
+  position: relative;
+  z-index: 1;
+}
+.fbLogo {
+  height: 60px;
+}
+.padB {
+  padding-bottom: 30px;
+}
+.poster {
+  margin-top: 200px;
+  height: 600px;
+  width: 400px;
+}
+.dogBanner {
+  width: 100%;
+  object-fit: contain;
+}
+.inside {
+  margin-top: -50px;
+  margin-left: 25px;
+}
+.btn-new{
+  position: relative;
+  background: #F1B766;
+  color: rgb(51,55,69);
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+}
+.btn-new:hover {
+  letter-spacing: .25em;
+  color: white;
+  -webkit-text-stroke: 1px rgb(51,55,69);
+}
+p.ml {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.spaceEven {
+  padding-left: 50px;
+  justify-content: space-evenly;
+}
+.mT {
+  margin-top: 30px;
+}
+.remove{
+  list-style: none;
+}
+.pT {
+  padding-top: 15px;
+}

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - hopeful</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/hopeful.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="gunmetal container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/hm_1.png" alt="htLogo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Help">How to Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Forms">Forms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer gunmetal">
+        <div class="d-flex justify-content-center text-center text-light ">
+            <table class="short">
+                <thead>
+                    <tr>
+                        <th>Volunteer Hours</th>
+                        <th>Follow Us On Socials</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Monday - Friday: 9:30am - 12:30pm, 5:30pm-8pm</td>
+                    <td><a href="https://www.facebook.com/hopefultails/"><img src="~/images/facebook-16.ico" alt="facebook icon"></a></td>
+                    <td>2303 Oak Leaf St</td>
+                </tr>
+                <tr>
+                    <td>Saturday - Sunday: 9am - 12pm, 5pm-8pm</td>
+                    <td><a href="#"><img src="~/images/email-12-16.ico" alt="email icon"></a></td>
+                    <td>Joliet, IL 60436</td>
+                </tr>
+                <tr>
+                    <td>*Adoptions and viewings by appointment only*</td>
+                    <td><a href="https://www.instagram.com/hopefultails_animalrescue/"><img src="~/images/instagram-6-16.ico" alt="instagram icon"></a></td>
+                    <td>Telephone: (779) 206-2132</td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
