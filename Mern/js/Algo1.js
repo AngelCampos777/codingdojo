@@ -109,9 +109,25 @@ function partitionSort(arr, pivot, left = 0, right = arr.length - 1) {
     return arr;
 }
 
+function quickSort(arr, left, right) {
+    var index;
+    if(arr.length > 1){
+        index = partitionSort(arr, pivot);
+        if(left < index -1){
+            quickSort(arr, left, index-1);
+        }
+        if(index < right){
+            quickSort(arr, index, right);
+        }
+    }
+    return arr;
+}
+
 
 arr1 = [5,9,2,7,6,1,1,3]
 arr2 = [7,9,1,6,2,10,8,4,3]
 // console.log(Bubble(arr1));
 // console.log(Select(arr1));
 // console.log(Insertion(arr1));
+// console.log(partitionSort(arr2, 3));
+console.log(quickSort(arr2, 0, arr2.length-1));

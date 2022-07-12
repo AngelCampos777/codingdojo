@@ -16,8 +16,9 @@ function App() {
         <li>Dodge</li>
       </ul>
       <p class="App-link">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae deleniti quaerat voluptate ea autem odit optio consectetur similique, officia iure, at unde. Llama distinctio modi ipsum eligendi aut ratione necessitatibus?</p>
-      <First fullName ="Llama" counter={0}/>
+      <First fullName ="Llama" counter={5}/>
       <First fullName ="Gavina" counter={0}/>
+      {/* <First /> */}
       </header>
     </div>
   );
