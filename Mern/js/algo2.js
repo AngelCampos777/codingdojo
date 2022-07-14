@@ -56,5 +56,89 @@ function union(arr1, arr2){
         return result;
 }
 
+//Diagonal Difference
+//Given a squared matrix (2D array) of integers, calculate the absolute difference between the sum of the diagonals (top left to bottom right and top right to bottom left)
+const squareMatrix1 = [
+ [1, 2, 3],
+ [4, 5, 6],
+ [9, 8, 9],
+];
+//const expected1 = 2;
+//left to right diagonal: 1 + 5 + 9 = 15
+//right to left diagonal: 3 + 5 + 9 = 17
+//absolute difference = 2
+const squareMatrix2 = [
+ [1, 2, 3, 4, 5],
+ [1, 2, 3, 4, 5],
+ [1, 2, 3, 4, 5],
+ [1, 2, 3, 4, 5],
+ [1, 2, 3, 4, 5],
+];
+//const expected2 = 0; 
+//left to right diagonal: 1 + 2 + 3 + 4 + 5 = 15
+//right to left diagonal: 5 + 4 + 3 + 2 + 1 = 15
+//absolute difference = 0
+function Diag(arr){
+    let RDiag = 0;
+    let LDiag = 0;
+    for(let i=0; i<arr.length; i++){
+        RDiag += arr[i][i];
+        LDiag += arr[i][arr.length-1-i];
+    }
+    return Math.abs(RDiag-LDiag);
+}
 
+// Symmetric Difference
+// Given two arrays of integers, return an array of all the numbers the arrays do NOT have in common
+// The arrays may or may not be in order
+// If there are duplicates of values that are in one array and not the other, only include the value once
+// Ex: given [1,2] and [2,1,3] return [3]
+// Ex: given [1,1] and [1] return []
+// Ex: given [1,2,3] and [4,5,6] return [1,2,3,4,5,6]
+// Ex: given [4,1,2,3,4] and [1,2,3,5,5] return [4,5]
+
+function symmetricDiff(arr1, arr2) {
+    let symmDiff = [];
+
+    let map1 = {};
+    let map2 = {};
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (map1[arr1[i]] >= 1){
+            map1[arr1[i]] += 1;
+        } else {
+            map1[arr1[i]] = 1;
+        }
+    }
+
+    for (let i = 0; i < arr2.length; i++) {
+        if (map2[arr2[i]] >= 1){
+            map2[arr2[i]] += 1;
+        } else {
+            map2[arr2[i]] = 1;
+        }
+    }
+
+    for (var j in map1) {
+        if (!map2[j]){
+            symmDiff.push(parseInt(j));
+        } else {
+            continue;
+        }
+    }
+
+    for (var k in map2) {
+        if (!map1[k]){
+            symmDiff.push(parseInt(k));
+        }
+        else {
+            continue;
+        }
+    }
+
+    return symmDiff;
+}
+
+console.log(Diag(squareMatrix1));
+console.log(Diag(squareMatrix2));
 // console.log(orderedIntersection([1,1,1,2,3,4], [1,1,3,4,5]));
