@@ -55,8 +55,11 @@ const Form = props => {
                 </div>
                 <div>
                     <label htmlFor="confirmPassword">Confirm Password:</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" onChange={e => setConfirmPassword(e.target.value)}/>
+                    <input type="password" name="confirmPassword" id="confirmPassword" onChange={e => {
+                        setConfirmPassword(e.target.value);
+                        }}/>
                     {TextValid3(confirmPassword) ? "" : <p>Password is Required and must be at least 8 characters</p>}
+                    {password === confirmPassword ? "" : <p>Passwords must match</p>}
                 </div>
                 <input type="submit"  value="Submit"/>
             </form>
