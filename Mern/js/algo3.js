@@ -53,29 +53,29 @@ console.log(Insert(table, insertData1));
 // Find Objects
 // Given a search criteria object whose values will only be primitives (ints, strings, booleans) and a list of objects return any object that matches all the key value pairs in the search critera object
 
-const items = [
-    { firstName: "Bob", lastName: "Bobbert", age: 31 },
-    { firstName: "John", lastName: "Smith", age: 25 },
-    { firstName: "Bob", lastName: "Smith", age: 27 },
-    { firstName: "Bob", lastName: "White", age: 31 },
-];
+// const items = [
+//     { firstName: "Bob", lastName: "Bobbert", age: 31 },
+//     { firstName: "John", lastName: "Smith", age: 25 },
+//     { firstName: "Bob", lastName: "Smith", age: 27 },
+//     { firstName: "Bob", lastName: "White", age: 31 },
+// ];
 
-const searchCriteria1 = {
-    firstName: "Bob",
-    age: 31,
-};
-const expected1 = [
-    { firstName: "Bob", lastName: "Bobbert", age: 31 },
-    { firstName: "Bob", lastName: "White", age: 31 },
-];
+// const searchCriteria1 = {
+//     firstName: "Bob",
+//     age: 31,
+// };
+// const expected1 = [
+//     { firstName: "Bob", lastName: "Bobbert", age: 31 },
+//     { firstName: "Bob", lastName: "White", age: 31 },
+// ];
 
-const searchCriteria2 = {
-    lastName: "Smith",
-};
-const expected2 = [
-    { firstName: "John", lastName: "Smith", age: 25 },
-    { firstName: "Bob", lastName: "Smith", age: 27 },
-];
+// const searchCriteria2 = {
+//     lastName: "Smith",
+// };
+// const expected2 = [
+//     { firstName: "John", lastName: "Smith", age: 25 },
+//     { firstName: "Bob", lastName: "Smith", age: 27 },
+// ];
 
 // Given an array of objects, a searchFor string, and searchBy key that exists in the object return a new array of only those objects whose value for the given key starts with the given search string.
 // You can assume the key will exist on the object and the value of that key will be a string.
@@ -124,38 +124,92 @@ function searchObjects(people, searchFor, searchBy){
     return answer;
 }
 
-const people = [
-  {
-    firstName: "John",
-    lastName: "Doe",
-  },
-  {
-    firstName: "Jane",
-    lastName: "Doe",
-  },
-  {
-    firstName: "Eddy",
-    lastName: "Lee",
-  },
-  {
-    firstName: "John",
-    lastName: "Fawn",
-  },
-  {
-    firstName: "Edward",
-    lastName: "Kim",
-  },
-];
+// const people = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Doe",
+//   },
+//   {
+//     firstName: "Eddy",
+//     lastName: "Lee",
+//   },
+//   {
+//     firstName: "John",
+//     lastName: "Fawn",
+//   },
+//   {
+//     firstName: "Edward",
+//     lastName: "Kim",
+//   },
+// ];
 
-const searchFor1 = "Jo";
-const searchBy1 = "firstName";
-const expected1 = [
-  {
-    firstName: "John",
-    lastName: "Doe",
-  },
-  {
-    firstName: "John",
-    lastName: "Fawn",
-  },
-];
+// const searchFor1 = "Jo";
+// const searchBy1 = "firstName";
+// const expected1 = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//   },
+//   {
+//     firstName: "John",
+//     lastName: "Fawn",
+//   },
+// ];
+
+// Given an array of objects representing people, and a string representing a bad habit return a "santasNaughtyList" containing the first and last names of all the people who have the matching bad habit so that santa knows how much coal he needs.
+
+const students = [
+    {
+      firstName: "FN1",
+      lastName: "LN1",
+      habits: [ "doesn't wash dishes", "falls asleep in lecture", "shows up early",
+      ],
+    },
+    {
+      firstName: "FN2",
+      lastName: "LN2",
+      habits: ["shows up late", "washes dishes", "helps peers"],
+    },
+    {
+      firstName: "FN3",
+      lastName: "LN3",
+      habits: ["doesn't wash dishes", "hoards snacks", "shows up late"],
+    },
+    {
+      firstName: "FN4",
+      lastName: "LN4",
+      habits: ["shows up early", "helps peers", "washes dishes"],
+    },
+  ];
+  
+  const badHabit1 = "doesn't wash dishes";
+  const expected1 = ["FN1 LN1", "FN3 LN3"];
+  
+  const badHabit2 = "shows up late";
+  const expected2 = ["FN2 LN2", "FN3 LN3"];
+  
+  const badHabit3 = "doesn't do algorithms";
+  const expected3 = [];
+
+  function habitFinder(list, habit) {
+    let santasNaughtyList = [];
+
+    for (let i = 0; i < list.length; i++) {
+
+        if (list[i].habits.includes(habit)){
+            santasNaughtyList.push(`${list[i].firstName} ${list[i].lastName}`);
+        }
+
+        // for (let j = 0; j < list[i].habits.length; j++){
+        //     if (list[i].habits[j] == habit){
+        //         santasNaughtyList.push(`${list[i].firstName} ${list[i].lastName}`);
+        //     }
+        // }
+    }
+
+    return santasNaughtyList;
+}
