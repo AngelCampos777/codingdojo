@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ReadAll />} />
         <Route path='/add' element={<AddForm />} />
-        <Route path='/update' element={<UpdateForm />} />
+        <Route path='/update/:_id' element={<UpdateForm />} />
         <Route path='/products/:_id' element={<ReadOne />} />
       </Routes>
     </div>
