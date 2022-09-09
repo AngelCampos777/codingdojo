@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "le6d9D5Ys007rLyNOipAGOQ+eRq6ZxDKcs4XVSdRzTA=",
+  "Hash": "iXNvtS5jobFWlQlRI6e5uACa7hRu+G5CZlmdu3xYV5Q=",
   "Source": "hopeful",
   "BasePath": "_content/hopeful",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\th3lo\\Coding\\C#\\hopeful\\wwwroot\\images\\adoption_contract.pdf",
-      "SourceId": "hopeful",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\th3lo\\Coding\\C#\\hopeful\\wwwroot\\",
-      "BasePath": "_content/hopeful",
-      "RelativePath": "images/adoption_contract.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\adoption_contract.pdf"
     },
     {
       "Identity": "C:\\Users\\th3lo\\Coding\\C#\\hopeful\\wwwroot\\images\\babies.jpg",
@@ -491,23 +474,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\hm_1.png"
-    },
-    {
-      "Identity": "C:\\Users\\th3lo\\Coding\\C#\\hopeful\\wwwroot\\images\\hopefultailsadoptionapp_updated_2020.pdf",
-      "SourceId": "hopeful",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\th3lo\\Coding\\C#\\hopeful\\wwwroot\\",
-      "BasePath": "_content/hopeful",
-      "RelativePath": "images/hopefultailsadoptionapp_updated_2020.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\hopefultailsadoptionapp_updated_2020.pdf"
     },
     {
       "Identity": "C:\\Users\\th3lo\\Coding\\C#\\hopeful\\wwwroot\\images\\instagram-6-16.ico",

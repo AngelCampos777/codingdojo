@@ -1,0 +1,23 @@
+Well, I definitely have alot to learn still. 
+Despite this project being in base html, css, and js I found myself struggling with the implementation of the carousel, search, and hamburger menu implementations.
+I did import the Barlow font from google fonts, I believe that worked
+I also applied the images that were missing except for:
+The hamburger menu, which I had difficulty recognizing if it was given to me or if I had to implement one myself.
+The TikTok icon seemed to be the same as the twitter icon, I'm not sure if that was my issue or if the image was incorrect.
+In regards to the slideshow/carousel I currently lack the knowledge on how to create one without bootstrap and I was unsure if that was breaking the rules
+so I did some digging to see if I could create one. After a few failed attempts I decided to break the problem down into banners at least so that some 
+work was available, rather than show up empty handed.
+social links were added to the footer, css was not applied due to time being spent on the larger items
+footer hamburger menu, another knowledge check that I am unable to do without bootstrap at this time.
+The search function would be the most difficult in my opinion, what I think I understood was when the search icon was clicked a searchbar should
+which would then take a text imput and match it against in page section ids. this was an entirely novel task for me so I had prioritized the easier functions first.
+other flaws on my end:
+1 background pattern doesnt span the entire page vertically
+2 it looks as though the content box for the main items doesnt expand past a ceritan point on microsoft edge but does on chrome
+3 slide 2's inner text is on the wrong side (last thing I was working on before stopping to do write up)
+4 im unsure of what exactly was meant by scalability with png format, if you are referring to being consistent in applying alt definitions then I believe I understood
+but if something else was intended then I am unaware of what that means.
+All in all, this was an interesting Challenge, pretty enlightening for myself. Im wondering if this was c# and I could use bootstrap if I would've accomplished more.
+I hope that a bit of the grit I have despite being very new has shown through via accomplishing what I was able and hopefully catching everything I couldn't accomplish.
+If I do not end up hitting the mark then I'd like to thank you for your time and the opportunity, it means a lot.
+-Angel Campos
